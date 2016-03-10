@@ -1,0 +1,9 @@
+  \REQUIRE $\{a_1, a_2,\ldots, a_i, \ldots, a_n\}_{\ne} \in \mathbb{Z}$; $x \in \mathbb{Z}$
+  \ENSURE $result = k $, where $ (a_k = x) $ and $ k \in \{1,\ldots,n\} $ if the element is found; otherwise $k = -1$ 
+
+  \STATE $result \leftarrow -1$
+  \FOR{$i=1$ to $n$}
+      \IF{$result == a_i$}
+      \STATE $result \leftarrow i$
+      \ENDIF
+  \ENDFOR

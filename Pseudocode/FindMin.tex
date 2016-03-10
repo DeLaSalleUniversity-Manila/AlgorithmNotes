@@ -1,0 +1,9 @@
+  \REQUIRE $\{a_1, a_2,\ldots, a_i, \ldots, a_n\} \in \mathbb{Z}$
+  \ENSURE $result = min({a_1, a_2,\ldots, a_i, \ldots, a_n})$
+
+  \STATE $result \leftarrow a_1$
+  \FOR{$i=2$ to $n$}
+      \IF{$result > a_i$}
+      \STATE $result \leftarrow a_i$
+      \ENDIF
+  \ENDFOR

@@ -1,0 +1,20 @@
+  \REQUIRE $\{a_1, a_2,\ldots, a_i, \ldots, a_n\}_{\ne} \in \mathbb{Z}$, where $a_1<a_2<\ldots<a_n$; $x \in \mathbb{Z}$
+  \ENSURE $result = k $, where $ (a_k = x) $ and $ k \in \{1,\ldots,n\} $ if the element is found; otherwise $k = -1$ 
+
+  \STATE $i \leftarrow 1$
+  \STATE $j \leftarrow n$
+  
+  \WHILE{$i < j$}
+  	  \STATE $mid \leftarrow \floor*{\dfrac{i + j}{2}}$
+  	  \IF{$x > a_{mid}$}
+         \STATE $i \leftarrow mid + 1$
+      \ELSE 
+         \STATE $j \leftarrow mid$
+      \ENDIF
+  \ENDWHILE
+  
+  \IF{$x == a_i$}
+      \STATE $result \leftarrow i$
+  \ELSE 
+      \STATE $result \leftarrow -1$
+  \ENDIF
