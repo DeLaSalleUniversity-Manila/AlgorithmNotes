@@ -6,6 +6,6 @@
      \STATE $result_i \leftarrow 0$
   	 \WHILE{$x \ge c_i$}
   	   \STATE $x \leftarrow x - c_i$ 
-       \STATE $result_i \leftarrow result_i + 1$ \COMMENT{add a coin of denomination $c_i$}
+       \STATE $result_i \leftarrow result_i + 1$
       \ENDWHILE
   \ENDFOR

@@ -4,7 +4,7 @@
 
   \STATE $result \leftarrow 0$
   \FOR{$i=1$ to $n$}
-  	 \WHILE{$x \le c_i$}
+  	 \WHILE{$x \ge c_i$}
   	   \STATE $x \leftarrow x - c_i$ 
        \STATE $result \leftarrow result + 1$
       \ENDWHILE
