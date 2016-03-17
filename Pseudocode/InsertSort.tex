@@ -1,0 +1,14 @@
+  \REQUIRE $\{a_1, a_2,\ldots, a_i, \ldots, a_n\} \in \mathbb{R}$, $n \ge 2$
+  \ENSURE $\{a_1, a_2,\ldots, a_n\}$ where $a_1 < a_2 < \ldots < a_n$
+   
+  \FOR{$j=2$ to $n$}
+     \STATE $i \leftarrow 1$
+      \WHILE{$a_j > a_i$}
+           \STATE $i \leftarrow i + 1$
+      \ENDWHILE
+           \STATE $temp \leftarrow a_j$
+           \FOR{$k=0$ to $j-i-1$}
+               \STATE $a_{j-k} = a_{j-k-1}$
+           \ENDFOR
+           \STATE $a_i = temp$
+  \ENDFOR

@@ -1,0 +1,10 @@
+  \REQUIRE schedule $\{(s_1, f_1), (s_2, f_2),\ldots, (s_n, f_n)\}$ where \\ $s_i$ - start times of talks, and $f_i$ - finish times of talks            
+  \ENSURE $result = $ set of scheduled talks
+
+  \STATE $result \leftarrow \emptyset$
+  \STATE $sort(\{(s_1, f_1), (s_2, f_2),\ldots, (s_n, f_n)\})$ w.r.t. finish times   
+  \FOR{$i=1$ to $n$}
+      \IF{$(s_i, f_i)$ is compatible with $result$}
+      \STATE $result \leftarrow  result \cup (s_i, f_i)$
+      \ENDIF
+  \ENDFOR

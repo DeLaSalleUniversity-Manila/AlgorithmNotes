@@ -1,0 +1,11 @@
+  \REQUIRE $\{c_1, c_2,\ldots, c_i, \ldots, c_n\} \in \mathbb{C}$oin Denomination \\
+          where $c_1 < c_2 < \ldots < c_n$; $x$ - amount of money in cents
+  \ENSURE $result = $ minimum number of coins
+
+  \STATE $result \leftarrow 0$
+  \FOR{$i=1$ to $n$}
+  	 \WHILE{$x \ge c_i$}
+  	   \STATE $x \leftarrow x - c_i$ 
+       \STATE $result \leftarrow result + 1$
+      \ENDWHILE
+  \ENDFOR
