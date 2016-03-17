@@ -10,6 +10,8 @@
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
+\usepackage[nolists,nomarkers,tablesfirst]{endfloat}
+
 % Redefine the rule colors
 % WARNING: may have adverse effects on other float rule color (untested)
 \makeatletter
@@ -50,81 +52,201 @@ output must be produced after a finite number of steps.
 Finally, the procedure should be applicable for all problems of the desired form, not just for a
 particular set of input.
 
-An algorithm is often described using a pseudocode which is a high-level description of an algorithm that uses the structural conventions of a standard programming language, but is intended for human reading. The following sections describe an algorithm in terms of a pseudocode with actual implementation.
+An algorithm is often described using a pseudocode which is a high-level description of an algorithm that uses the structural conventions of a standard programming language, but is intended for human reading. The following sections describe an algorithm in terms of a pseudocodes.
 
 
-\section{Finding the Maximum}
+\section{Pseudocodes}
+ 
  
 
-\floatname{algorithm}{\color{blue}Algorithm}
+\floatname{algorithm}{\color{green(html/cssgreen)}
+\centering\textbf{Finding the Maximum}\\
+Algorithm}
 \begin{algorithm}
-  \caption{\color{green(html/cssgreen)}Calculate $maximum$ element in an integer set}
-  \label{alg1}
-  \color{green(html/cssgreen)}
+  \caption{\color{green(html/cssgreen)} Calculate $maximum$ element in a finite integer set}
+  \color{blue}
   \begin{algorithmic}
     \input{Pseudocode/FindMax.tex}
   \end{algorithmic}
 \end{algorithm}
 
 
-\section{Finding the Minimum}
- 
 
-\floatname{algorithm}{\color{blue}Algorithm}
+\floatname{algorithm}{\color{green(html/cssgreen)}
+\centering\textbf{Finding the Minimum}\\
+Algorithm}
 \begin{algorithm}
-  \caption{\color{green(html/cssgreen)}Calculate $minimum$ element in an integer set}
-  \label{alg1}
-  \color{green(html/cssgreen)}
+  \caption{\color{green(html/cssgreen)}Calculate $minimum$ element in a finite integer set}
+  \color{blue}
   \begin{algorithmic}
     \input{Pseudocode/FindMin.tex}
   \end{algorithmic}
 \end{algorithm}
 
 
-\section{Linear Search (Using a For-Loop)}
  
-
-\floatname{algorithm}{\color{blue}Algorithm}
+ 
+\floatname{algorithm}{\color{green(html/cssgreen)}
+\centering\textbf{Linear/Sequential Search (Using a For-Loop)}\\
+Algorithm}
 \begin{algorithm}
-  \caption{\color{green(html/cssgreen)}Locate an element $x$ in a list of distinct
+  \caption{\color{green(html/cssgreen)} Locate an element $x$ in a list of distinct
 values or determine that it is not in the list.}
-  \label{alg1}
-  \color{green(html/cssgreen)}
+  \color{blue}
   \begin{algorithmic}
     \input{Pseudocode/LinearSearchFor.tex}
   \end{algorithmic}
 \end{algorithm}
  
+
  
  
- \section{Linear Search (Using a While-Loop)}
- 
- 
- \floatname{algorithm}{\color{blue}Algorithm}
+ \floatname{algorithm}{\color{green(html/cssgreen)}
+ \centering\textbf{Linear/Sequential Search (Using a While-Loop)}\\
+ Algorithm}
 \begin{algorithm}
   \caption{\color{green(html/cssgreen)}Locate an element $x$ in a list of distinct
 values or determine that it is not in the list.}
-  \label{alg1}
-  \color{green(html/cssgreen)}
+  \color{blue}
   \begin{algorithmic}
     \input{Pseudocode/LinearSearchWhile.tex}
   \end{algorithmic}
 \end{algorithm}
 
 
- \section{Binary Search}
+
  
- 
- \floatname{algorithm}{\color{blue}Algorithm}
+ \floatname{algorithm}{\color{green(html/cssgreen)}
+ \centering\textbf{Binary Search}\\
+ Algorithm}
 \begin{algorithm}
   \caption{\color{green(html/cssgreen)}Locate an element $x$ in a list of distinct
 and sorted values or determine that it is not in the list.}
-  \label{alg1}
-  \color{green(html/cssgreen)}
+  \color{blue}
   \begin{algorithmic}
     \input{Pseudocode/BinarySearch.tex}
   \end{algorithmic}
 \end{algorithm}
  
+ 
+ 
+ \floatname{algorithm}{\color{green(html/cssgreen)}
+ \centering\textbf{Bubble Sort}\\
+ Algorithm}
+\begin{algorithm}
+  \caption{\color{green(html/cssgreen)} Given a list of elements of a set, sort in increasing order.}
+  \color{blue}
+  \begin{algorithmic}
+    \input{Pseudocode/BubbleSort.tex}
+  \end{algorithmic}
+\end{algorithm}
+
+
+
+
+ \floatname{algorithm}{\color{green(html/cssgreen)}
+ \centering\textbf{Insert Sort}\\
+ Algorithm}
+\begin{algorithm}
+  \caption{\color{green(html/cssgreen)} Given a list of elements of a set, sort in increasing order.}
+  \color{blue}
+  \begin{algorithmic}
+    \input{Pseudocode/InsertSort.tex}
+  \end{algorithmic}
+\end{algorithm}
+
+
+
+ 
+ 
+\floatname{algorithm}{\color{green(html/cssgreen)}
+\centering\textbf{Greedy Change-Making}\\
+Algorithm}
+\begin{algorithm}
+  \caption{\color{green(html/cssgreen)}Make $x$ cents change with quarters, dimes, nickels, and pennies, and
+using the least total number of coins.}
+  \color{blue}
+  \begin{algorithmic}
+    \input{Pseudocode/GreedyChange.tex}
+  \end{algorithmic}
+\end{algorithm}
+ 
+ 
+ 
+\floatname{algorithm}{\color{green(html/cssgreen)}
+\centering\textbf{Greedy Change-Making per Denomination}\\
+Algorithm}
+\begin{algorithm}
+  \caption{\color{green(html/cssgreen)}Make $x$ cents change with quarters, dimes, nickels, and pennies, and
+using the least total number of coins.}
+  \color{blue}
+  \begin{algorithmic}
+    \input{Pseudocode/GreedyChangePerValue.tex}
+  \end{algorithmic}
+\end{algorithm}
+ 
+ 
+ 
+ 
+ \floatname{algorithm}{\color{green(html/cssgreen)}
+\centering\textbf{Greedy Algorithm for Scheduling Talks}\\
+Algorithm}
+\begin{algorithm}
+  \caption{\color{green(html/cssgreen)}Suppose we have a group of proposed talks with preset start and end times. Schedule as many of these talks as possible in a lecture hall, under the assumptions that once a talk starts, it continues until it ends, no two talks can proceed at the same time, and a talk can begin at the same time another one ends.}
+  \color{blue}
+  \begin{algorithmic}
+    \input{Pseudocode/GreedySchedule.tex}
+  \end{algorithmic}
+\end{algorithm}
+ 
+ 
+ 
+\floatname{algorithm}{\color{green(html/cssgreen)}
+   \centering\textbf{Matrix Multiplication}\\
+   Algorithm}
+\begin{algorithm}
+  \caption{\color{green(html/cssgreen)}Multiply an $m \times k$ matrix by a $k \times n$ matrix.}
+  \color{blue}
+  \begin{algorithmic}
+    \input{Pseudocode/MultiplyMatrix.tex}
+  \end{algorithmic}
+\end{algorithm}
+ 
+ 
+ 
+ \floatname{algorithm}{\color{green(html/cssgreen)}
+   \centering\textbf{Boolean Product of Zero-One Matrices}\\
+   Algorithm}
+\begin{algorithm}
+  \caption{\color{green(html/cssgreen)}Calculate the Boolean product of an $m \times k$ zero-one matrix by a $k \times n$ zero-one matrix.}
+  \color{blue}
+  \begin{algorithmic}
+    \input{Pseudocode/BooleanProduct.tex}
+  \end{algorithmic}
+\end{algorithm}
+ 
+ 
+ 
+    \floatname{algorithm}{\color{green(html/cssgreen)}
+   \centering\textbf{Closest Pair}\\
+   Algorithm}
+\begin{algorithm}
+  \caption{\color{green(html/cssgreen)}Find the closest pair of points by computing the distances between all pairs of the $n$ points and determining the smallest distance.}
+  \color{blue}
+  \begin{algorithmic}
+    \input{Pseudocode/ClosestPair.tex}
+  \end{algorithmic}
+\end{algorithm}
+ 
+
+\clearpage
+ 
+ \begin{thebibliography}{1}
+
+\bibitem{Algorithm:rosen}
+K.~Rosen, \emph{Discrete mathematics and its applications}, 7th~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax New York, NY: McGraw-Hill, 2012.
+
+\end{thebibliography}
 
 \end{document}

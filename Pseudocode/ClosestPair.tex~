@@ -1,0 +1,11 @@
+  \REQUIRE $\{(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)\}$ where $x_k, y_k \in \mathbb{R}$
+  \ENSURE $result = minimum(distance((x_i, y_i), (x_j, y_j)))$
+
+  \STATE $min \leftarrow \infty$   
+  \FOR{$i=2$ to $n$}
+     \FOR{$j=1$ to $i-1$}
+        \IF{$(x_j - x_i)^2 + (y_j - y_i)^2 < min$}
+        \STATE $result \leftarrow a_i$
+        \ENDIF
+     \ENDFOR
+  \ENDFOR

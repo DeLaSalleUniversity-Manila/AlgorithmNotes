@@ -1,0 +1,11 @@
+  \REQUIRE $m \times p$ matrix $A = [a_{ij}]$; $p \times n$ matrix $B = [b_{ij}]$
+  \ENSURE $result = m \times n$ matrix $C = [c_{ij}]$
+
+  \FOR{$i=1$ to $m$}
+		 \FOR{$i=1$ to $n$}
+		 	  \STATE $c_{ij} \leftarrow 0$
+		      \FOR{$k=1$ to $p$}
+                   \STATE $c_{ij} \leftarrow c_{ij} \vee (a_{ik} \wedge b_{kj})$
+  		 	  \ENDFOR
+  		 \ENDFOR
+  \ENDFOR
